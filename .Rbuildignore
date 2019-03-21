@@ -1,0 +1,3 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+vignettes/Select_and_plot_bromeliaceae_distribution_and_diversity.Rmd

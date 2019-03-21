@@ -1,0 +1,103 @@
+---
+title: "Select and plot bromeliaceae distribution and diversity"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.height = 8,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The bromeliad package contains estimated distributions for 2395 species of the pineapple family (Bromeliaceae) plus three functions to access and visualize this data: `get_range`, `map_species`, `map_richness`. The included ranges were estimated from occurrence records, using different algorithms, including climate suitability models based on climate, convex hulls and geospatial buffering. Make sure to check Zizka *et al.* 2019 for the methodology of range estimation. 
+
+# Libraries and installation
+You can install bromeliad using the devtools package. If you want to visualize species richness patterns, you also need to install speciesgeocodeR.
+
+```{r, eval = T}
+library(devtools)
+
+#install_github("idiv-biodiversity/bromeliad")
+#install_github("azizka/speciesgeocodeR")
+
+library(bromeliad)
+library(speciesgeocodeR)
+```
+
+
+# Selection and vizualisation
+
+If you want to use data for all bromeliaceae, you can access them directly via the dataset using `data()`. If you are only interested in a subset of the species you can use the `get_range` function to select species based on taxonomy (scientific name, canonical name, genus, subfamily) or traits (life form, range size, conservation assessment), or a combination of those.
+
+You can select one or multiple species and visualize their range as per species map. The type argument controls what kind of range estimation is selected.
+
+```{r}
+# range polygon based on scientific name with authorities
+dat <- get_range(scientific = "Aechmea mexicana Baker")
+
+# presence absence model
+dat <- get_range(scientific = "Aechmea alba Mezr", type = "binary")
+
+#modelled habitat suitability
+dat <-  get_range(scientific = "Aechmea alba Mez", type = "suitability")
+
+# based on canonical name
+dat <- get_range(canonical = "Aechmea mexicana")
+
+# multiple species
+dat <- get_range(canonical = c("Aechmea mexicana", "Aechmea alba"))
+
+# Species maps
+map_species(canonical = "Aechmea mexicana")
+
+# Richness map 
+map_richness(dat)
+```
+
+You can also use higher rank taxa to select multiple species at once.
+```{r}
+# one genus
+dat <-  get_range(genus = "Aechmea")
+
+# multiple genera
+dat <- get_range(genus = c("Aechmea", "Zizkaea"))
+
+# subfamily
+dat <- get_range(subfamily = "Pitcairnioideae")
+
+#map_species(dat) This will generate many maps! You can send them to a pdf:
+# pdf("achmea_ranges.pdf")
+# map_species(genus = "Aechmea")
+# dev.off()
+
+#Richness pattern
+map_richness(dat)
+```
+
+
+Or based on traits and conservation status.
+
+```{r}
+#life form
+dat <- get_range(life_form = "epiphyte")
+map_richness(dat)
+
+# conservation status
+dat <-  get_range(assessment = c("CR", "VU"))
+```
+
+Different criteria can also be combined, for instance to get all species of *Aechmea* classified as critcally endangered, endangered or vulnerable.
+
+```{r}
+dat <-  get_range(genus = "Aechmea", assessment = c("CR", "EN", "VU"))
+map_richness(dat)
+```
+
+

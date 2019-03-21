@@ -1,0 +1,16 @@
+Package: bromeliad
+Title: Distribution Data for 2395 Bromeliad Species
+Version: 0.9-1
+Authors@R: person("Alexander", "zizka", email = "zizka.alexander@gmail.com", role = c("aut", "cre"))
+Description: Contains range estimates and modelled distributions for 2395 species of the ananas family (bromeliaceae), together with some convenience functoins to extract specific taxa and life forms and visualize diversity.
+Depends: R (>= 3.5.0)
+Imports: dplyr, ggplot2, ggthemes, magrittr, methods, raster, rnaturalearth, 
+    speciesgeocodeR, rlang, sf, sp, viridis
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Suggests: knitr,
+    devtools,
+    rmarkdown,
+VignetteBuilder: knitr
