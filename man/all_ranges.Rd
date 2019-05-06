@@ -18,7 +18,7 @@ proj4string:    +proj=longlat +datum=WGS84 +no_defs
 all_ranges
 }
 \description{
-Polygons of the geographic distribution for 2395 bromeliad species as derived from distribution modelling.
+Polygons of the geographic distribution for 3295 bromeliad species as derived from distribution modelling.
 For species with more than 9 occurrence records available modelled using climate SDMs,
 for species with 3-8 records available modelled by convex hulls, and
 for species with less than 3 records modelled by a geographic buffer with 50 kilometer radius

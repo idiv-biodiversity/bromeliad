@@ -42,7 +42,7 @@
 
 #' all ranges
 #'
-#' Polygons of the geographic distribution for 2395 bromeliad species as derived from distribution modelling.
+#' Polygons of the geographic distribution for 3295 bromeliad species as derived from distribution modelling.
 #' For species with more than 9 occurrence records available modelled using climate SDMs,
 #' for species with 3-8 records available modelled by convex hulls, and
 #' for species with less than 3 records modelled by a geographic buffer with 50 kilometer radius
@@ -60,3 +60,26 @@
 #'
 #'
 "all_ranges"
+
+#' georef_additions
+#'
+#'
+#' A data.frame of occurrence records derived from georeferencing type specimen from the literature.
+#'
+#' \describe{
+#' \item{\code{accepted_name_species}}{}
+#' \item{\code{scientificname}}{}
+#' \item{\code{family}}{}
+#' \item{\code{genus}}{}
+#' \item{\code{species}}{}
+#' \item{\code{taxonrank}}{}
+#' \item{\code{decimallongitude}}{}
+#' \item{\code{decimallatitude}}{}
+#' \item{\code{coordinate_accuracy}}{}
+#' \item{\code{flag}}{}
+#' \item{\code{remarks}}{}
+#' \item{\code{basisofrecords}}{}
+#' \item{\code{source}}{}
+#' }
+"georef_additions"
+
