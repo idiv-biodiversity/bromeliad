@@ -79,7 +79,7 @@ map_richness <- function(x, title = NULL){
   # Plot
   if(sum(ri$layer,na.rm = TRUE) > 0){
     plo_tot <- ggplot()+
-      ggplot2::geom_tile(data = ri, aes(x = .data$x, y = .data$y, fill = .data$layer), alpha = 0.8)+
+      ggplot2::geom_tile(data = ri, aes(x = .data$x, y = .data$y, fill = .data$layer), alpha = 1)+
       viridis::scale_fill_viridis(name = "Species", direction = -1, na.value = "transparent")+
       geom_polygon(data = world.behr,
                    aes(x = .data$long, y = .data$lat, group = .data$group), fill = "transparent", color = "black")+
@@ -91,7 +91,7 @@ map_richness <- function(x, title = NULL){
                      legend.position = c(0, 0))
   }else{
     plo_tot <- ggplot()+
-      ggplot2::geom_tile(data = ri, aes(x = .data$x, y = .data$y), alpha = 0.8)+
+      ggplot2::geom_tile(data = ri, aes(x = .data$x, y = .data$y), alpha = 1)+
      # viridis::scale_fill_viridis(name = "Species", direction = -1, na.value = "transparent")+
       geom_polygon(data = world.behr,
                    aes(x = .data$long, y = .data$lat, group = .data$group), fill = "transparent", color = "black")+
