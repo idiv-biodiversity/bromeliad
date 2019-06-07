@@ -10,10 +10,9 @@ vignette: >
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
-  fig.width = 6,
-  fig.height = 8,
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.pos="H"
 )
 ```
 
@@ -39,7 +38,7 @@ If you want to use data for all bromeliaceae, you can access them directly via t
 
 You can select one or multiple species and visualize their range as per species map. The type argument controls what kind of range estimation is selected.
 
-```{r}
+```{r, fig.height = 5}
 # range polygon based on scientific name with authorities
 dat <- get_range(scientific = "Aechmea mexicana Baker")
 
@@ -57,13 +56,12 @@ dat <- get_range(canonical = c("Aechmea mexicana", "Aechmea alba"))
 
 # Species maps
 map_species(canonical = "Aechmea mexicana")
-
-# Richness map 
-map_richness(dat)
 ```
 
+\pagebreak
+
 You can also use higher rank taxa to select multiple species at once.
-```{r}
+```{r, fig.height = 5}
 # one genus
 dat <-  get_range(genus = "Aechmea")
 
@@ -73,15 +71,11 @@ dat <- get_range(genus = c("Aechmea", "Zizkaea"))
 # subfamily
 dat <- get_range(subfamily = "Pitcairnioideae")
 
-#map_species(dat) This will generate many maps! You can send them to a pdf:
-# pdf("achmea_ranges.pdf")
-# map_species(genus = "Aechmea")
-# dev.off()
-
 #Richness pattern
 map_richness(dat)
 ```
 
+\pagebreak
 
 Or based on traits and conservation status.
 
@@ -94,6 +88,8 @@ map_richness(dat)
 dat <-  get_range(assessment = c("CR", "VU"))
 ```
 
+\pagebreak
+
 Different criteria can also be combined, for instance to get all species of *Aechmea* classified as critcally endangered, endangered or vulnerable.
 
 ```{r}
@@ -101,24 +97,31 @@ dat <-  get_range(genus = "Aechmea", assessment = c("CR", "EN", "VU"))
 map_richness(dat)
 ```
 
+\pagebreak
+
 # Write results to disk
 
 To write one of the taxonomy and conservation assessment as a table, use
 
-```{r}
+```{r, eval = F}
+data(taxonomy_traits)
+write.csv(taxonomy_traits, "georeferenced_bromeliad_occurrences.csv")
 
 ```
 
 To write the ranges as a shape file, use
 
-```{r}
+```{r, eval = F, message = FALSE, warning = FALSE}
+library(sf)
+st_write(dat, "distribution_ranges.shp")
 
 ```
 
 To write the georeferenced occurrences as a table, use
 
-```{r}
-
+```{r, eval = F}
+data(georef_additions)
+write.csv(georef_additions, "georeferenced_bromeliad_occurrences.csv")
 ```
 
 

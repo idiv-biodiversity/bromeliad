@@ -39,6 +39,7 @@ modens <- lapply(paste("C:/Users/az64mycy/Dropbox (iDiv)/research_projects/31_br
                        sep = ""), "raster")
 modens <- lapply(modens, "readAll")
 model_ensemble <- modens
+names(model_ensemble) <- gsub(".gri", "", lis)
 save(model_ensemble, file = "data/model_ensemble.rda")
 
 # binary models
@@ -51,6 +52,7 @@ modens <- lapply(paste("C:/Users/az64mycy/Dropbox (iDiv)/research_projects/31_br
                       sep = ""), "raster")
 modens <- lapply(modens, "readAll")
 model_binary <- modens
+names(model_binary) <- gsub(".gri", "", lis)
 save(model_binary, file = "data/model_binary.rda")
 
 
