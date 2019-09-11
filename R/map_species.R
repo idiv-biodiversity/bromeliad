@@ -147,6 +147,7 @@ map_species <-  function(scientific = NULL, canonical = NULL,
     if(!is.null(suit)){
       mod_sub <- suit[names(suit) == sps[i]]
       mod_sub <-  data.frame(rasterToPoints(mod_sub[[1]]))
+      names(mod_sub) <- c("x", "y", "layer")
       plo.subs <- plo.subs+
           geom_tile(data = mod_sub,
                     ggplot2::aes(x = .data$x, y = .data$y, fill = .data$layer),

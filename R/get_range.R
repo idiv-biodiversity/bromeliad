@@ -80,7 +80,8 @@ get_range <- function(scientific = NULL, canonical = NULL,
   }
 
   switch(type,
-         binary = {model_binary <-  bromeliad::model_binary; out <- model_binary[which(names(model_binary) %in% taxonomy_traits$tax_accepted_name)]},
+         binary = {model_binary <-  bromeliad::model_binary;
+                   out <- model_binary[which(names(model_binary) %in% taxonomy_traits$tax_accepted_name)]},
          suitability = {model_ensemble <- bromeliad::model_ensemble; out <- model_ensemble[which(names(model_ensemble) %in% taxonomy_traits$tax_accepted_name)]},
          polygon = {all_ranges <- bromeliad::all_ranges; out <- dplyr::filter(all_ranges, .data$tax_accepted_name %in% taxonomy_traits$tax_accepted_name)}
            )
