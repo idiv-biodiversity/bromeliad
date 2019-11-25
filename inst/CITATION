@@ -1,0 +1,18 @@
+note <- sprintf("R package version %s", meta$Version)
+
+bibentry(bibtype = "article",
+         title = "CoordinateCleaner: standardized cleaning of occurrence records from biological collection databases",
+         author = c(person("Alexander", "Zizka"),
+                    person("Josue", "Azevedo"),
+                    person("Elton", "Leme"),
+                    person("Beatriz", "Neves"),
+                    person("Andrea", "Ferreira da Costa"),
+                    person("Daniel", "Caceres"),
+                    person("Georg", "Zizka")),
+         journal = "Diversity and Distributions",
+         number = "0",
+         pages = 0-0,
+         year = 2019,
+         note = note,
+         doi = "10.1111/ddi.13004",
+         url = "https://github.com/idiv-biodiversity/bromeliad")
