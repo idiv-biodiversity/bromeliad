@@ -1,4 +1,4 @@
-# bromeliad 1.0-1
+# bromeliad 1.0-2
 
 A data package with distribution data for 3,272 bromeliaceae species across tropical America.
 
