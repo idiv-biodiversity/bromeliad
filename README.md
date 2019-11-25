@@ -1,6 +1,6 @@
 # bromeliad 1.0-1
 
-A data package with distribution data for 2272 bromeliaceae species across tropical America.
+A data package with distribution data for 3,272 bromeliaceae species across tropical America.
 
 ## Included data
 The package includes five data files:
@@ -22,7 +22,7 @@ library(bromeliad)
 ```
 
 ## Documentation
-The pacakge also includes some convinieince functions to select taxa and visualize species ranges and diversity. A vignette describing how to select individual taxa and visualize species distributions and diversity patterns is available [here](), the corresponding paper [here](https://onlinelibrary.wiley.com/doi/full/10.1111/ddi.13004).
+The pacakge also includes some convinieince functions to select taxa and visualize species ranges and diversity. A vignette describing how to select individual taxa and visualize species distributions and diversity patterns is available [here](https://idiv-biodiversity.github.io/bromeliad/), the corresponding paper [here](https://onlinelibrary.wiley.com/doi/full/10.1111/ddi.13004).
 
 ## Contribute
 If you want to contribute with new species or corrections, please contact the [maintainer](mailto:alexander.zizka@idiv.de) of the package.
