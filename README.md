@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3243425.svg)](https://doi.org/10.5281/zenodo.3243425)
+
+
 # bromeliad 1.0-2
 
 A data package with distribution data for 3,272 bromeliaceae species across tropical America.
@@ -31,4 +34,4 @@ If you want to contribute with new species or corrections, please contact the [m
 The package and data are available under a GPL-3 license.
 
 ## Citation
-If you use the data, please cite the package as Zizka A, Azevedo J, Leme E, NEves B, Costa AFC, Caceres D & Zizka, G (2019) Biogeography and conservation status of the pineapple family (Bromeliaceae). *Diversity and Distributions*, 0:0-0. DOI:10.1111/ddi.13004.
+If you use the data, please cite the package as Zizka A, Azevedo J, Leme E, NEves B, Costa AFC, Caceres D & Zizka, G (2019) Biogeography and conservation status of the pineapple family (Bromeliaceae). *Diversity and Distributions*, 26(2):183-195. DOI:10.1111/ddi.13004.
