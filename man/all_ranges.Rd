@@ -4,7 +4,8 @@
 \name{all_ranges}
 \alias{all_ranges}
 \title{all ranges}
-\format{Simple feature collection with 6 features and 1 field
+\format{
+Simple feature collection with 6 features and 1 field
 geometry type:  GEOMETRY
 dimension:      XY
 bbox:           xmin: -78.6167 ymin: -30.27966 xmax: -36.88333 ymax: 0.3333
@@ -13,7 +14,8 @@ proj4string:    +proj=longlat +datum=WGS84 +no_defs
 \describe{
 \item{\code{tax_accepted_name}}{the scientific species name}
 \item{\code{geometry}}{the range polygon of the species}
-}}
+}
+}
 \usage{
 all_ranges
 }

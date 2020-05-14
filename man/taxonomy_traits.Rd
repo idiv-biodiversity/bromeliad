@@ -4,7 +4,8 @@
 \name{taxonomy_traits}
 \alias{taxonomy_traits}
 \title{taxonomy_traits}
-\format{A data frame with 17 variables:
+\format{
+A data frame with 17 variables:
 \describe{
 \item{\code{tax_accepted_name}}{the accepted species name}
 \item{\code{tax_genus}}{the genus}
@@ -18,7 +19,8 @@
 \item{\code{conv_conr_stat}}{The conservation status of the species based on automated conservation assessment}
 \item{\code{tr_growth_form}}{the growth form of the species from the world checklist of selected plant families}
 \item{\code{tax_canonical}}{the canonical species name}
-}}
+}
+}
 \usage{
 taxonomy_traits
 }

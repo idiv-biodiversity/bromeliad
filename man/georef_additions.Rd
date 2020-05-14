@@ -4,7 +4,9 @@
 \name{georef_additions}
 \alias{georef_additions}
 \title{georef_additions}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1207 rows and 15 columns.}
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1207 rows and 15 columns.
+}
 \usage{
 georef_additions
 }

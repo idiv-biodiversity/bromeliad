@@ -4,10 +4,18 @@
 \alias{map_species}
 \title{Mapping species distributions}
 \usage{
-map_species(scientific = NULL, canonical = NULL, genus = NULL,
-  subfamily = NULL, life_form = NULL, assessment = NULL,
-  range_size = NULL, model = "suitability", polygon = TRUE,
-  iucn = TRUE)
+map_species(
+  scientific = NULL,
+  canonical = NULL,
+  genus = NULL,
+  subfamily = NULL,
+  life_form = NULL,
+  assessment = NULL,
+  range_size = NULL,
+  model = "suitability",
+  polygon = TRUE,
+  iucn = TRUE
+)
 }
 \arguments{
 \item{scientific}{a character vector of full scientific names including authorities, of the species of interest}

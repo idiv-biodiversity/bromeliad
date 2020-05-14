@@ -4,9 +4,16 @@
 \alias{get_range}
 \title{Select Bromeliaceae Species Ranges by Taxonomy and Traits}
 \usage{
-get_range(scientific = NULL, canonical = NULL, genus = NULL,
-  subfamily = NULL, life_form = NULL, assessment = NULL,
-  range_size = NULL, type = "polygon")
+get_range(
+  scientific = NULL,
+  canonical = NULL,
+  genus = NULL,
+  subfamily = NULL,
+  life_form = NULL,
+  assessment = NULL,
+  range_size = NULL,
+  type = "polygon"
+)
 }
 \arguments{
 \item{scientific}{a character vector of full scientific names including authorities, of the species of interest}

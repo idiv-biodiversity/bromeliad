@@ -1,3 +1,12 @@
+bromeliad 1.0-3 (2020-05-14)
+=========================
+
+### MINOR IMPROVEMENTS
+  * updated citation
+  * updated license
+
+
+
 bromeliad 1.0-2 (2019-11-25)
 =========================
 
